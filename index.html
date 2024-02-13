@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="stylesheet" href="css/style-dark.css" id="dark-mode">
+	<link rel="stylesheet" href="css/style-light.css" id="light-mode" disabled>
 
 
 
@@ -115,6 +119,8 @@
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	
+	<button onclick="toggleDarkLightMode()">Toggle Dark/Light Mode</button>
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -141,7 +147,7 @@
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url();">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(/images/imgg);">
 	          	 <div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -160,8 +166,8 @@
 						// Create an array of typing text
 						const typingTexts = [
 						'Developer ',
-						'Analyst ',
-						'Programmer  ',
+						'Programmer',
+						'Otaku',
 						];
 
 						// Create a function to display the typing animation for a given text
@@ -261,15 +267,14 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>As a recent 2023 CSE graduate skilled in development and data analytics, I'm eager to kickstart my career. I bring a strong foundation in programming and data analysis, ready to contribute effectively to innovative projects in the tech industry.</p>
+								<p>As a recent 2023 CSE graduate skilled in development, I'm eager to kickstart my career. I bring a strong foundation in Programming and DSA, ready to contribute effectively to innovative projects in the tech industry.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
-									<li class="d-flex"><span>Profile:</span> <span>Development &amp; Data Analytics</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>Development &amp;</span></li>
 									<li class="d-flex"><span>Programming:</span> <span>Python,Java,.NET-C#(basics)</span></li>
 									<li class="d-flex"><span>Web Devopment:</span> <span>Html,Css,React.js,Node.js </span></li>
 									<li class="d-flex"><span>Databases:</span><span>SQL(Microsoft Sql Server),MongoDb</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI </span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Numpy,Pandas, Excel, Git,Flutter</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Numpy, Pandas, Excel, Git,Flutter</span></li>
 									
 									
 								</ul>
@@ -564,6 +569,16 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+   <script>
+	function toggleDarkLightMode() {
+		var darkMode = document.getElementById('dark-mode');
+		var lightMode = document.getElementById('light-mode');
+
+		// Toggle between enabling/disabling dark mode and light mode
+		darkMode.disabled = !darkMode.disabled;
+		lightMode.disabled = !lightMode.disabled;
+	}
+   </script>
     
   </body>
 </html>
